@@ -38,11 +38,10 @@ function loadChapter() {
 
   function init(){
       fillChapterList();
-      var lastPart = parseInt(location.href.split("/").pop());
+      var lastPart = parseInt(location.href.split("?").pop());
       if(lastPart == NaN)CurrentChapter = StartChapter;
       else if(lastPart >= StartChapter && lastPart <= EndChapter)CurrentChapter = lastPart;
       else{
-          document.getElementById("error-box").innerHTML = "<error>Cannot find this chapter loading the last one.</error>";
         CurrentChapter = EndChapter;
       }
       
