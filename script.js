@@ -1,4 +1,4 @@
-var StartChapter = 15, EndChapter = 150, CurrentChapter=StartChapter;
+var StartChapter = 15, EndChapter = 200, CurrentChapter=StartChapter;
 function loadChapter() {
     var elmnt, xhttp;
     //Set Title
@@ -18,7 +18,7 @@ function loadChapter() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4) {
         if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+        if (this.status == 404) {elmnt.innerHTML = "Not Translated.";}
       }
     }
     xhttp.open("GET", "cb/" + CurrentChapter + ".txt", true);
@@ -49,7 +49,7 @@ function loadChapter() {
   }
 
   function moveTo(amt){
-      var toChap = CurrentChapter + amt;
+      var toChap = parseInt(CurrentChapter) + parseInt(amt);
       if(toChap >= StartChapter && toChap <= EndChapter){
         CurrentChapter = toChap;
         location.href = location.href.split("#")[0]+"#"+CurrentChapter;
@@ -60,8 +60,7 @@ function loadChapter() {
   function changeChap(txtTo)
   {
     CurrentChapter=txtTo;
-    window.scrollTo(0,0);
-
     location.href = location.href.split("#")[0]+"#"+CurrentChapter;
     loadChapter();
+    window.scrollY = 0;
   }
