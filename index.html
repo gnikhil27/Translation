@@ -10,10 +10,9 @@
     </head>
     <body>
         <header>
-            <select class="lstChapter" onchange="CurrentChapter=this.value;loadChapter();"></select>
+            <select class="lstChapter" onchange="changeChap(this.value)"></select>
             <span id="header-title" ></span>
-            <button onclick="moveTo(-1)">Prev</button>
-            <button onclick="moveTo(1)">Next</button>
+            <button onclick="moveTo(-1)">Prev</button><button onclick="moveTo(1)">Next</button>
         </header>
         <main>
             <div id="error-box"></div>
@@ -23,7 +22,8 @@
             </section>
         </main>
         <footer>
-            <select class="lstChapter" onchange="CurrentChapter=this.value;loadChapter();"></select>
+            <select class="lstChapter" onchange="changeChap(this.value);"></select>
+            <button onclick="moveTo(-1)">Prev</button><button onclick="moveTo(1)">Next</button>
         </footer>
         <!-- 78 is current -->
         <script>init();</script>
