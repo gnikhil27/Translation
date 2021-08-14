@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+        </style>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title id="page-title"></title>
+    </head>
+    <body>
+        <header>
+            <select class="lstChapter" onchange="loadChapter(this.value);"></select>
+            <span id="header-title" ></span>
+            <button onclick="moveTo(-1)">Prev</button>
+            <button onclick="moveTo(1)">Next</button>
+        </header>
+        <main>
+            <div id="error-box"></div>
+            <section>
+                <div id="content"></div>
+
+            </section>
+        </main>
+        <footer>
+            <select class="lstChapter" onchange="loadChapter(this.value);"></select>
+        </footer>
+        <!-- 78 is current -->
+        <script>init();</script>
+    </body>
+</html>
