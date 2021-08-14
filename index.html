@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <select class="lstChapter" onchange="loadChapter(this.value);"></select>
+            <select class="lstChapter" onchange="CurrentChapter=this.value;loadChapter();"></select>
             <span id="header-title" ></span>
             <button onclick="moveTo(-1)">Prev</button>
             <button onclick="moveTo(1)">Next</button>
@@ -23,7 +23,7 @@
             </section>
         </main>
         <footer>
-            <select class="lstChapter" onchange="loadChapter(this.value);"></select>
+            <select class="lstChapter" onchange="CurrentChapter=this.value;loadChapter();"></select>
         </footer>
         <!-- 78 is current -->
         <script>init();</script>
