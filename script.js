@@ -1,4 +1,4 @@
-var StartChapter = 15, EndChapter = 350, CurrentChapter=StartChapter;
+var StartChapter = 15, EndChapter = 450, CurrentChapter=StartChapter;
 function loadChapter() {
     var elmnt, xhttp;
     //Set Title
