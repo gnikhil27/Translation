@@ -1,5 +1,5 @@
-var StartChapter = 15, EndChapter = 450, CurrentChapter=StartChapter;
-function loadChapter() {
+var StartChapter = 15, EndChapter = 600, CurrentChapter=StartChapter;
+async function loadChapter() {
     var elmnt, xhttp;
     //Set Title
     document.getElementById("page-title").innerHTML = "Chapter "+ CurrentChapter;
@@ -49,7 +49,8 @@ function loadChapter() {
   }
 
   function moveTo(amt){
-      var toChap = parseInt(CurrentChapter) + parseInt(amt);
+    window.scrollTo(0,0);
+    var toChap = parseInt(CurrentChapter) + parseInt(amt);
       if(toChap >= StartChapter && toChap <= EndChapter){
         CurrentChapter = toChap;
         location.href = location.href.split("#")[0]+"#"+CurrentChapter;
@@ -62,5 +63,4 @@ function loadChapter() {
     CurrentChapter=txtTo;
     location.href = location.href.split("#")[0]+"#"+CurrentChapter;
     loadChapter();
-    window.scrollY = 0;
   }
