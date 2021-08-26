@@ -1,4 +1,4 @@
-var StartChapter = 15, EndChapter = 600, CurrentChapter=StartChapter;
+var StartChapter = 15, EndChapter = 650, CurrentChapter=StartChapter;
 async function loadChapter() {
     var elmnt, xhttp;
     //Set Title
